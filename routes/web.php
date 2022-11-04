@@ -22,3 +22,7 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/register',[App\Http\Controllers\CustomRegisterController::class,'registerformshow'])->name('register');
 Route::post('/register',[App\Http\Controllers\CustomRegisterController::class,'registerUser'])->name('register.store');
+
+Route::get('/login',[App\Http\Controllers\CustomRegisterController::class,'loginformShow'])->name('login');
+Route::post('/login',[App\Http\Controllers\CustomRegisterController::class,'loginUser'])->name('login.store');
+Route::post('/logout',[App\Http\Controllers\CustomRegisterController::class,'logout'])->name('logout');
